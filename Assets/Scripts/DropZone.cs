@@ -9,4 +9,14 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     {
         Debug.Log("OnDrop to: " + gameObject.name);
     }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("2");
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Debug.Log("3");
+    }
 }
