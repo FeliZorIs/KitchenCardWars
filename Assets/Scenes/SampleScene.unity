@@ -729,6 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b72d8f7de4a557429e954e19ba80085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
   typeOfItem: 0
 --- !u!1001 &1626047345
 PrefabInstance:
@@ -1446,6 +1447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b72d8f7de4a557429e954e19ba80085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
   typeOfItem: 0
 --- !u!1001 &6702069731997168085
 PrefabInstance:

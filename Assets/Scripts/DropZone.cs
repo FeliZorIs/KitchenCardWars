@@ -5,6 +5,20 @@ using UnityEngine.EventSystems;
 
 public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    public GameObject enemy; 
+
+    void Start()
+    {
+        enemy = GameObject.FindGameObjectWithTag("enemy"); 
+        if (enemy = null)
+        {
+            enemy = GameObject.FindGameObjectWithTag("enemy");
+            Debug.Log(enemy.gameObject.name + " is present");
+        }
+        else
+            Debug.Log("theres no enemy here");
+    }
+
     public Dragable.Slot typeOfItem = Dragable.Slot.WEAPON;
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -26,9 +40,6 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        GameObject enemy = null;
-        enemy = GameObject.FindGameObjectWithTag("enemy");
-
         if (eventData.pointerDrag == null)
         {
             return;
@@ -45,8 +56,8 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     }
 
     public void OnDrop(PointerEventData eventData)
-    {
-        Debug.Log(eventData.pointerDrag.name + " was dropped on to " + gameObject.name);
+    {        
+        //Debug.Log(eventData.pointerDrag.name + " was dropped on to " + gameObject.name);
 
         Dragable d = eventData.pointerDrag.GetComponent<Dragable>();
         if (d != null)
@@ -54,7 +65,13 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             if (typeOfItem == d.typeOfItem)
             {
                 d.parentToReturnTo = this.transform;
-
+                if (enemy != null)
+                {
+                    enemy.GetComponent<Enemy>().health -= 5;
+                }
+                else
+                    Debug.Log("NO ENEMY");
+                
                 GameObject[] parms = new GameObject[1] { eventData.pointerDrag.gameObject };
                 StartCoroutine("Wait", parms);
             }
