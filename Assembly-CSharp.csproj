@@ -64,6 +64,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Dragable.cs" />
     <Compile Include="Assets\Scripts\DropZone.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/deadr/git/KitchenCardWars/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

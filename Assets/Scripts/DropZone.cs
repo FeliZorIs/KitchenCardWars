@@ -26,6 +26,8 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        GameObject enemy = null;
+        enemy = GameObject.FindGameObjectWithTag("enemy");
 
         if (eventData.pointerDrag == null)
         {
@@ -49,9 +51,25 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         Dragable d = eventData.pointerDrag.GetComponent<Dragable>();
         if (d != null)
         {
-            if(typeOfItem == d.typeOfItem)
+            if (typeOfItem == d.typeOfItem)
+            {
                 d.parentToReturnTo = this.transform;
+
+                GameObject[] parms = new GameObject[1] { eventData.pointerDrag.gameObject };
+                StartCoroutine("Wait", parms);
+            }
         }
     }
+
+    //Coroutines
+    IEnumerator Wait(GameObject[] parms)
+    {
+        GameObject thing = parms[0];
+        yield return new WaitForSeconds(2f);
+        Destroy(thing);
+
+        yield return null;
+    }
+
 }
  
