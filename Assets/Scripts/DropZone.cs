@@ -6,6 +6,13 @@ using UnityEngine.EventSystems;
 public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Dragable.Slot typeOfItem = Dragable.Slot.WEAPON;
+    public GameObject player;
+    public GameObject enemy;
+
+    void Start()
+    {
+        
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -51,6 +58,8 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             if (typeOfItem == d.typeOfItem)
             {
                 d.parentToReturnTo = this.transform;
+
+                CardThings(eventData.pointerDrag.gameObject);
                 
                 GameObject[] parms = new GameObject[1] { eventData.pointerDrag.gameObject };
                 StartCoroutine("Wait", parms);
@@ -68,5 +77,16 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         yield return null;
     }
 
+    public void CardThings(GameObject card)
+    {
+        card.GetComponent<Card>();
+
+    }
+
+    public void findObject()
+    {
+        player = GameObject.Find("Player");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+    }
 }
  

@@ -10,9 +10,10 @@ public class Card : MonoBehaviour
     public int          health;
     public int          cost;
     public int          energy;
-    public string       cardNameT;
-    public string       DescT;
+    public string       cardNameString;
+    public string       DescString;
 
+    Text CostT;
     Text cardName;
     Text Desc;
 
@@ -20,8 +21,17 @@ public class Card : MonoBehaviour
     {
         cardName = this.transform.Find("Name").GetComponent<Text>();
         Desc = this.transform.Find("Description").GetComponent<Text>();
+        CostT = this.transform.Find("CostDisplay").GetComponentInChildren<Text>();
 
-        cardName.text = cardNameT;
-        Desc.text = DescT;
+        if (cardNameString == null || Desc == null)
+        {
+            Debug.Log("One of the values is null");
+        }
+        else
+        {
+            cardName.text = cardNameString;
+            Desc.text = DescString;
+            CostT.text = cost.ToString();
+        }
     }
 }

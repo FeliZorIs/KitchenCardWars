@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     GameObject          player;
     GameObject          eventSystem;
     Transform           hand;
-    public GameObject   Cards;
+    public GameObject[] Cards = new GameObject[10];
 
     bool                turnSwitch;
     bool                turnSwitch2;
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         eventSystem = GameObject.Find("EventSystem");
         hand = GameObject.Find("Hand").transform;
 
-        if (enemy == null)
+/*        if (enemy == null)
             Debug.Log("This aint it Chief");
         else
             Debug.Log("Ladies and gentlemen... we got " + enemy.gameObject.name);
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
         if (hand == null)
             Debug.Log("This aint it Chief");
         else
-            Debug.Log("Ladies and gentlemen... we got " + hand.gameObject.name);
+            Debug.Log("Ladies and gentlemen... we got " + hand.gameObject.name); */
     }
 
     public void endTurn()
@@ -110,15 +110,13 @@ public class GameManager : MonoBehaviour
     public void emptyHand()
     {
         int kidCount = hand.childCount;
-        Debug.Log(kidCount);
+       // Debug.Log(kidCount);
 
         for (int i = 0; i < kidCount; i++)
         {
             Destroy(hand.GetChild(i).gameObject);
             kidCount = hand.childCount;
         }
-
-        Debug.Log(kidCount);
     }
 
     public void newHand()
@@ -127,7 +125,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 1; i <= drawSize; i++)
         {
-            Instantiate(Cards, hand);
+            Instantiate(Cards[Random.RandomRange(0, Cards.Length-1)], hand);
         }
     }
     
