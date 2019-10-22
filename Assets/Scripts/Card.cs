@@ -9,6 +9,7 @@ public class Card : MonoBehaviour
     public int          shield;
     public int          health;
     public int          cost;
+    public int          energy;
     public string       cardNameT;
     public string       DescT;
 
@@ -17,8 +18,8 @@ public class Card : MonoBehaviour
 
     void Start()
     {
-        cardName = this.transform.FindChild("Name").GetComponent<Text>();
-        Desc = this.transform.FindChild("Description").GetComponent<Text>();
+        cardName = this.transform.Find("Name").GetComponent<Text>();
+        Desc = this.transform.Find("Description").GetComponent<Text>();
 
         cardName.text = cardNameT;
         Desc.text = DescT;

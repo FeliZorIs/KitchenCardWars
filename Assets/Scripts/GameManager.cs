@@ -5,9 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     GameObject          enemy;
+    GameObject          player;
     GameObject          eventSystem;
     Transform           hand;
-    public GameObject   Card;
+    public GameObject   Cards;
 
     bool                turnSwitch;
     bool                turnSwitch2;
@@ -75,6 +76,7 @@ public class GameManager : MonoBehaviour
     void findObjects()
     {
         enemy = GameObject.FindGameObjectWithTag("enemy");
+        player = GameObject.Find("Player");
         eventSystem = GameObject.Find("EventSystem");
         hand = GameObject.Find("Hand").transform;
 
@@ -82,6 +84,11 @@ public class GameManager : MonoBehaviour
             Debug.Log("This aint it Chief");
         else
             Debug.Log("Ladies and gentlemen... we got " + enemy.gameObject.name);
+
+        if (player == null)
+            Debug.Log("This aint it Chief");
+        else
+            Debug.Log("Ladies and gentlemen... we got " + player.gameObject.name);
 
         if (eventSystem == null)
             Debug.Log("This aint it Chief");
@@ -120,7 +127,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 1; i <= drawSize; i++)
         {
-            Instantiate(Card, hand);
+            Instantiate(Cards, hand);
         }
     }
     

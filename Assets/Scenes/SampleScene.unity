@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2110cef8e965b544ab7069aa121a2511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card: {fileID: 7880254583013794500, guid: 3c40958be16d73d45be0b640ed96d342, type: 3}
+  Cards: {fileID: 7880254583013794500, guid: 3c40958be16d73d45be0b640ed96d342, type: 3}
 --- !u!4 &142039272
 Transform:
   m_ObjectHideFlags: 0
@@ -1970,7 +1970,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 225}
-  m_SizeDelta: {x: 0, y: 210}
+  m_SizeDelta: {x: 0, y: 403.8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2080875492
 MonoBehaviour:

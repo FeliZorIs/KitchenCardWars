@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 2805664540273035216}
   - component: {fileID: 2964538179170578060}
   m_Layer: 5
-  m_Name: Card
+  m_Name: VampireCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -334,8 +334,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 5
   shield: 0
-  health: 0
-  cost: 1
+  health: 5
+  cost: 2
+  energy: 0
   cardNameT: LEEEE ROOOYY
   DescT: JEEEEEENNNNKIIIINNNNS
 --- !u!1 &7880254583138624898
