@@ -173,6 +173,7 @@
     <Compile Include="Assets\Scripts\LevelSelection.cs" />
     <Compile Include="Assets\Scripts\NodeAnimation.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\TwitchChat.cs" />
     <None Include="Assets\Lean Asset\Common\Examples\Shaders\Alpha.shader" />
     <None Include="Assets\Lean Asset\Common\Examples\Fonts\OFL.txt" />
     <None Include="Assets\Lean Asset\Common\Examples\Shaders\Skybox.shader" />
