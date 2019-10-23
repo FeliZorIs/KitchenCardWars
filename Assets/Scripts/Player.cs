@@ -38,12 +38,12 @@ public class Player : MonoBehaviour
 
     public void findObjects()
     {
-        healthCount = this.transform.FindChild("HealthNum").GetComponent<Text>();
-        healthSlider = this.transform.FindChild("Slider").GetComponent<Slider>();
+        healthCount = this.transform.Find("HealthNum").GetComponent<Text>();
+        healthSlider = this.transform.Find("Slider").GetComponent<Slider>();
 
-        energyCount = this.transform.FindChild("Energy").transform.GetChild(0).GetComponent<Text>();
+        energyCount = this.transform.Find("Energy").transform.GetChild(0).GetComponent<Text>();
 
-        shieldImage = this.transform.FindChild("Shield").gameObject;
+        shieldImage = this.transform.Find("Shield").gameObject;
         shieldCount = shieldImage.transform.GetChild(0).GetComponent<Text>();
     }
 

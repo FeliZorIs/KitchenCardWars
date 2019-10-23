@@ -31,10 +31,10 @@ public class Enemy : MonoBehaviour
 
     public void findObjects()
     {
-        healthCount = this.transform.FindChild("EnemHealth").GetComponent<Text>();
-        healthSlider = this.transform.FindChild("Slider").GetComponent<Slider>();
+        healthCount = this.transform.Find("EnemHealth").GetComponent<Text>();
+        healthSlider = this.transform.Find("Slider").GetComponent<Slider>();
 
-        shieldImage = this.transform.FindChild("Shield").gameObject;
+        shieldImage = this.transform.Find("Shield").gameObject;
         shieldCount = shieldImage.transform.GetChild(0).GetComponent<Text>();
     }
 
