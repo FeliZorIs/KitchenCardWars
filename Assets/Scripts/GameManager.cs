@@ -132,6 +132,7 @@ public class GameManager : MonoBehaviour
     IEnumerator wait()
     {
         yield return new WaitForSeconds(3f);
+        player.GetComponent<Player>().energy = player.GetComponent<Player>().energyMax;
         GameState = gameState.PLAYERTURN;
 
         yield return null;

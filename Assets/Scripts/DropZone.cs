@@ -5,9 +5,16 @@ using UnityEngine.EventSystems;
 
 public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public Dragable.Slot typeOfItem = Dragable.Slot.WEAPON;
+    public Dragable.Slot        typeOfItem = Dragable.Slot.WEAPON;
     public GameObject player;
     public GameObject enemy;
+
+    /*public int enemHealth;
+    public int enemyShield;
+
+    public int playerHealth;
+    public int playerShield;
+    public int playerEnergy; */
 
     void Start()
     {
@@ -55,7 +62,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         Dragable d = eventData.pointerDrag.GetComponent<Dragable>();
         if (d != null)
         {
-            if (typeOfItem == d.typeOfItem && player.GetComponent<Player>().energy > eventData.pointerDrag.gameObject.GetComponent<Card>().cost)
+            if (typeOfItem == d.typeOfItem && player.GetComponent<Player>().energy >= eventData.pointerDrag.gameObject.GetComponent<Card>().cost)
             {
                 d.parentToReturnTo = this.transform;
 
@@ -71,7 +78,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     IEnumerator Wait(GameObject[] parms)
     {
         GameObject thing = parms[0];
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         Destroy(thing);
 
         yield return null;
@@ -80,8 +87,19 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     //Functions
     public void CardThings(GameObject card)
     {
-        card.GetComponent<Card>();
+        /* 
+         * playerHealth
+         * playerShield
+         * playerEnergy
+         * 
+         * enemyHealth
+         */
 
+        player.GetComponent<Player>().health += card.GetComponent<Card>().health;           //playerHealth
+        player.GetComponent<Player>().shield += card.GetComponent<Card>().shield;           //playerShield
+        player.GetComponent<Player>().energy -= card.GetComponent<Card>().cost;             //playerEnergy
+
+        enemy.GetComponent<Enemy>().health -= card.GetComponent<Card>().attack;
     }
 
     public void findObject()
