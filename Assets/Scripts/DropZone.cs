@@ -11,7 +11,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
     void Start()
     {
-        
+        findObject();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -55,7 +55,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         Dragable d = eventData.pointerDrag.GetComponent<Dragable>();
         if (d != null)
         {
-            if (typeOfItem == d.typeOfItem)
+            if (typeOfItem == d.typeOfItem && player.GetComponent<Player>().energy > eventData.pointerDrag.gameObject.GetComponent<Card>().cost)
             {
                 d.parentToReturnTo = this.transform;
 
@@ -77,6 +77,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         yield return null;
     }
 
+    //Functions
     public void CardThings(GameObject card)
     {
         card.GetComponent<Card>();
@@ -86,7 +87,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     public void findObject()
     {
         player = GameObject.Find("Player");
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        enemy = GameObject.FindGameObjectWithTag("enemy");
     }
 }
  

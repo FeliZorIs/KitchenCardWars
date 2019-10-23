@@ -10,6 +10,7 @@ public class Card : MonoBehaviour
     public int          health;
     public int          cost;
     public int          energy;
+
     public string       cardNameString;
     public string       DescString;
 
