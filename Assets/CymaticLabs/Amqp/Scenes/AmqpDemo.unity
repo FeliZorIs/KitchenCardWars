@@ -362,11 +362,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9ed1540023c5874cb42b73b8b5d974a, type: 2}
---- !u!4 &399735289 stripped
+--- !u!4 &399735289
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 399735288}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892919112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1736097006}
+  m_Father: {fileID: 4477401}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &471234571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -413,9 +423,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114557552359535390, guid: 954c2749f35e8af4fb83d1f879fcdb2d,
         type: 3}
+      propertyPath: OnConnected.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114557552359535390, guid: 954c2749f35e8af4fb83d1f879fcdb2d,
+        type: 3}
       propertyPath: ExchangeSubscriptions.Array.data[0].OnMessageReceived.m_TypeName
       value: CymaticLabs.Unity3D.Amqp.AmqpExchangeMessageReceivedUnityEvent, Assembly-CSharp,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 114557552359535390, guid: 954c2749f35e8af4fb83d1f879fcdb2d,
+        type: 3}
+      propertyPath: OnConnected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114557552359535390, guid: 954c2749f35e8af4fb83d1f879fcdb2d,
+        type: 3}
+      propertyPath: OnConnected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 954c2749f35e8af4fb83d1f879fcdb2d, type: 3}
@@ -517,12 +542,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc14764c794fbe42b78a9a3872e95ce, type: 3}
+--- !u!1 &1736097005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 399735288}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736097006}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1736097006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 399735288}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736097005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 399735289}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1886480743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4307368687093690, guid: 08f4b8ee11b325d4e9ca18b1a82c70a5,
     type: 3}
   m_PrefabInstance: {fileID: 1272125401}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1892919112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 399735288}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 399735289}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &2142292126
 GameObject:
   m_ObjectHideFlags: 0

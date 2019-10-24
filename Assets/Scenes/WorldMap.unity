@@ -333,6 +333,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
+      propertyPath: m_TagString
+      value: Node7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.781
@@ -1087,7 +1091,7 @@ GameObject:
   - component: {fileID: 323836619}
   m_Layer: 5
   m_Name: Touch Button (LeanButton) N4
-  m_TagString: Untagged
+  m_TagString: Node4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1281,6 +1285,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
+      propertyPath: m_TagString
+      value: Node1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.86
@@ -1459,6 +1467,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
+      propertyPath: m_TagString
+      value: Node3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.69
@@ -1534,7 +1546,7 @@ GameObject:
   - component: {fileID: 487546812}
   m_Layer: 5
   m_Name: Touch Button (LeanButton) N6
-  m_TagString: Untagged
+  m_TagString: Node6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2204,6 +2216,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
+      propertyPath: m_TagString
+      value: Node4
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16
@@ -2352,7 +2368,7 @@ GameObject:
   - component: {fileID: 837962740}
   m_Layer: 5
   m_Name: Touch Button (LeanButton) N8
-  m_TagString: Untagged
+  m_TagString: Node8
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2883,6 +2899,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
+      propertyPath: m_TagString
+      value: Node6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.07
@@ -3017,6 +3037,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
+      propertyPath: m_TagString
+      value: Node2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.89
@@ -3093,6 +3117,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
+      propertyPath: m_TagString
+      value: Node5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3607,6 +3635,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
+      propertyPath: m_TagString
+      value: Node9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.17
@@ -3987,7 +4019,7 @@ GameObject:
   - component: {fileID: 1327034351}
   m_Layer: 5
   m_Name: Touch Button (LeanButton) N2
-  m_TagString: Untagged
+  m_TagString: Node2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4462,7 +4494,7 @@ GameObject:
   - component: {fileID: 1432508754}
   m_Layer: 5
   m_Name: Touch Button (LeanButton) N7
-  m_TagString: Untagged
+  m_TagString: Node7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4654,7 +4686,7 @@ GameObject:
   - component: {fileID: 1458497147}
   m_Layer: 5
   m_Name: Touch Button (LeanButton) N9
-  m_TagString: Untagged
+  m_TagString: Node9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5227,7 +5259,7 @@ GameObject:
   - component: {fileID: 1665276851}
   m_Layer: 5
   m_Name: Touch Button (LeanButton) N3
-  m_TagString: Untagged
+  m_TagString: Node3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6079,7 +6111,7 @@ GameObject:
   - component: {fileID: 2061564363}
   m_Layer: 5
   m_Name: Touch Button (LeanButton) N5
-  m_TagString: Untagged
+  m_TagString: Node5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6372,6 +6404,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
+      propertyPath: m_TagString
+      value: Node8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f36c148914c8e05498dad1ca7becaa2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7344,7 +7380,7 @@ GameObject:
   - component: {fileID: 5970675574129597305}
   m_Layer: 5
   m_Name: Touch Button (LeanButton) N1
-  m_TagString: Untagged
+  m_TagString: Node1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

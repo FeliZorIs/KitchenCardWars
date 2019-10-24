@@ -58,37 +58,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9684}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9864}
+      Script: {instanceID: 9860}
     - Class: 114
-      Script: {instanceID: 9904}
+      Script: {instanceID: 9900}
     - Class: 114
-      Script: {instanceID: 9920}
+      Script: {instanceID: 9916}
     - Class: 114
-      Script: {instanceID: 10040}
+      Script: {instanceID: 10036}
     - Class: 114
-      Script: {instanceID: 10098}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10346}
+      Script: {instanceID: 10344}
     - Class: 114
-      Script: {instanceID: 10498}
+      Script: {instanceID: 10496}
     - Class: 114
-      Script: {instanceID: 10662}
+      Script: {instanceID: 10660}
     - Class: 114
-      Script: {instanceID: 10762}
+      Script: {instanceID: 10760}
     - Class: 114
-      Script: {instanceID: 10812}
+      Script: {instanceID: 10810}
     - Class: 114
-      Script: {instanceID: 10850}
+      Script: {instanceID: 10848}
     - Class: 114
-      Script: {instanceID: 11010}
+      Script: {instanceID: 11008}
     - Class: 114
-      Script: {instanceID: 11304}
+      Script: {instanceID: 11302}
     - Class: 114
-      Script: {instanceID: 11714}
+      Script: {instanceID: 11712}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11746}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,43 +145,43 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9684}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9864}
+      Script: {instanceID: 9860}
     - Class: 114
-      Script: {instanceID: 9904}
+      Script: {instanceID: 9900}
     - Class: 114
-      Script: {instanceID: 9950}
+      Script: {instanceID: 9946}
     - Class: 114
-      Script: {instanceID: 9972}
+      Script: {instanceID: 9968}
     - Class: 114
-      Script: {instanceID: 10020}
+      Script: {instanceID: 10016}
     - Class: 114
-      Script: {instanceID: 10270}
+      Script: {instanceID: 10072}
     - Class: 114
-      Script: {instanceID: 10346}
+      Script: {instanceID: 10268}
     - Class: 114
-      Script: {instanceID: 10510}
+      Script: {instanceID: 10344}
     - Class: 114
-      Script: {instanceID: 11010}
+      Script: {instanceID: 10508}
     - Class: 114
-      Script: {instanceID: 11042}
+      Script: {instanceID: 11008}
     - Class: 114
-      Script: {instanceID: 11146}
+      Script: {instanceID: 11040}
     - Class: 114
-      Script: {instanceID: 11300}
+      Script: {instanceID: 11144}
     - Class: 114
-      Script: {instanceID: 11304}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11412}
+      Script: {instanceID: 11302}
     - Class: 114
-      Script: {instanceID: 11600}
+      Script: {instanceID: 11410}
     - Class: 114
-      Script: {instanceID: 11674}
+      Script: {instanceID: 11598}
     - Class: 114
-      Script: {instanceID: 11714}
+      Script: {instanceID: 11672}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11712}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -321,7 +321,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 87d826f9ef515226ca1f996fd3147928
+      Hash: 144ae94fa9b1f26c692a29f8ba9c595c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Card
@@ -385,6 +385,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: d5d4395def8fd8c233019079e7f4f1c3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TwitchChat
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -1137,12 +1143,12 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: d5d4395def8fd8c233019079e7f4f1c3
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: TwitchChat
+    className: DBTest
   platform: 20
   scenePathNames:
   - Assets/Scenes/WorldMap.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/deadr/git/KitchenCardWars/tempBuild
+  playerPath: C:/Users/Johane/Documents/IT490git/KitchenCardWars/Builds
