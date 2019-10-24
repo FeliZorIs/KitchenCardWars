@@ -64,12 +64,15 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         {
             if (typeOfItem == d.typeOfItem && player.GetComponent<Player>().energy >= eventData.pointerDrag.gameObject.GetComponent<Card>().cost)
             {
-                d.parentToReturnTo = this.transform;
+                if (enemy != null)
+                {
+                    d.parentToReturnTo = this.transform;
 
-                CardThings(eventData.pointerDrag.gameObject);
-                
-                GameObject[] parms = new GameObject[1] { eventData.pointerDrag.gameObject };
-                StartCoroutine("Wait", parms);
+                    CardThings(eventData.pointerDrag.gameObject);
+
+                    GameObject[] parms = new GameObject[1] { eventData.pointerDrag.gameObject };
+                    StartCoroutine("Wait", parms);
+                }
             }
         }
     }
@@ -98,6 +101,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         player.GetComponent<Player>().health += card.GetComponent<Card>().health;           //playerHealth
         player.GetComponent<Player>().shield += card.GetComponent<Card>().shield;           //playerShield
         player.GetComponent<Player>().energy -= card.GetComponent<Card>().cost;             //playerEnergy
+        player.GetComponent<Player>().energy += card.GetComponent<Card>().energy;           //playerEnergy
 
         enemy.GetComponent<Enemy>().health -= card.GetComponent<Card>().attack;
     }

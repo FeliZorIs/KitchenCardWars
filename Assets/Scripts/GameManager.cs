@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
                 while (turnSwitch == false)
                 {
                     Debug.Log("Enemy Turn");
-                    StartCoroutine("wait");
+                    StartCoroutine("enemyAction");
                     turnSwitch = true;
                 }
                 break;
@@ -129,9 +129,26 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    IEnumerator wait()
+    IEnumerator enemyAction()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
+        int choice = Random.Range(1, 3);
+        if (choice == 1)
+        {
+            player.GetComponent<Player>().health -= Random.Range(5, 10);
+        }
+
+        if (choice == 2)
+        {
+            enemy.GetComponent<Enemy>().shield += Random.Range(1, 5);
+        }
+
+        if (choice == 3)
+        {
+            
+        }
+
+        yield return new WaitForSeconds(1.5f);
         player.GetComponent<Player>().energy = player.GetComponent<Player>().energyMax;
         GameState = gameState.PLAYERTURN;
 
