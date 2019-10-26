@@ -29,6 +29,8 @@ public class DBTry : MonoBehaviour
         }
     }
     */
+
+    /*
     void Start()
     {
         //A correct website page.
@@ -70,4 +72,70 @@ public class DBTry : MonoBehaviour
             }
         }
     }
+    */
+
+    public Text messageText;
+    public Text currentUploadInfo;
+    public Text valueText;
+    
+    readonly string getURL = "http://localhost/Get.php"; //add the php get file to the end of this
+    readonly string postURL = "http://localhost/Post.php"; //add the php post file to the end of this
+
+    void Start()
+    {
+        messageText.text = "Start";
+    }
+
+    public void ButtonUpload()
+    {
+        StartCoroutine(GetRequest());
+    }
+
+    IEnumerator GetRequest()
+    {
+        UnityWebRequest www = UnityWebRequest.Get(getURL);
+        yield return www.SendWebRequest();
+
+        if(www.isNetworkError || www.isHttpError)
+        {
+            Debug.LogError(www.error);
+        }
+        else
+        {
+            messageText.text = www.downloadHandler.text;
+        }
+    }
+
+    IEnumerator PostRequest(string curUpload, int value)
+    {
+        List<IMultipartFormSection> wwwForm = new List<IMultipartFormSection>();
+        //curUpload has to be the name of card or value, case matters
+        wwwForm.Add(new MultipartFormDataSection("cur"+curUpload, value.ToString()));
+        UnityWebRequest www = UnityWebRequest.Post(postURL, wwwForm);
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.LogError(www.error);
+        }
+        else
+        {
+            messageText.text = www.downloadHandler.text;
+        }
+    }
+
+    public void OnButtonSend()
+    {
+        if(currentUploadInfo.text == string.Empty)
+        {
+            messageText.text = "Empty";
+        }
+        else
+        {
+            messageText.text = "Sending";
+            //this is to manually send the updated info
+            StartCoroutine(PostRequest(currentUploadInfo.text, int.Parse(valueText.text)));
+        }
+    }
+    
 }
